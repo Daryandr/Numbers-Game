@@ -1,0 +1,323 @@
+﻿:root {
+    --dark-background-color: #5906A6;
+    --dark-text-color: #FFF873;
+    --background-color: #FFF873;
+    --text-color: #5906A6;
+    --button-color: #AA4DFF;
+    --dark-button-color: #FFF540;
+    --button-hover: #8E12FF;
+    --dark-button-hover: #FFF200;
+    --number-color: #C17DFF;
+    --button-text-color: white;
+    --dark-button-text-color: black;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+    --button-color: var(--dark-button-color);
+    --button-hover: var(--dark-button-hover);
+    --button-text-color: var(--dark-button-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+        --button-color: var(--dark-button-color);
+        --button-hover: var(--dark-button-hover);
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Amatic SC', cursive;
+    font-size: 6vmin;
+}
+
+main {
+    text-align: center;
+    margin-top: 4vmin;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+#theme {
+    border-color: var(--text-color);
+    font-size: 6vmin;
+    font-family: 'Amatic SC', cursive;
+}
+
+#user {
+    height: 5vmin;
+    width: 28vmin;
+    border-color: var(--text-color);
+    font-size: 6vmin;
+    font-family: 'Amatic SC', cursive;
+    padding: 0.1em;
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 5.5vmin;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 12vmin;
+}
+
+.info {
+    width: 38vmin;
+    display: inline-block;
+    text-align: center;
+    padding: 2vmin;
+    border: 3px solid var(--text-color);
+    background: var(--number-color);
+    color: var(--button-text-color);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2vmin;
+    font-size: 4vmin;
+    font-weight: 600;
+}
+
+.game {
+    margin: 3vmin;
+    display: inline-block;
+    width: 32vmin;
+    height: 8vmin;
+    text-align: center;
+    text-decoration: none;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    border-radius: 60px/50px;
+}
+
+    .game:hover {
+        background: var(--button-hover);
+    }
+
+footer {
+    padding: 3vmin;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    position: relative;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+    footer:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.4vmin;
+        background: var(--text-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+.menu {
+    display: inline-block;
+    width: 20vmin;
+    height: 8vmin;
+    text-align: center;
+    text-decoration: none;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    border-radius: 60px/50px;
+}
+
+.numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: 2.5vmin;
+    margin-right: 2.5vmin;
+    position: relative;
+}
+
+    .numbers:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.4vmin;
+        background: var(--text-color);
+        position: absolute;
+        top: 110%;
+        left: 0;
+    }
+
+.item {
+    width: 13.3vmin;
+    height: 13.3vmin;
+    border: 0.4vmin solid var(--text-color);
+    background: var(--number-color);
+    border-radius: 50%;
+}
+
+#field {
+    width: 100%;
+    height: 68vmin;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 44vmin;
+    max-height: 44vmin;
+    text-align: center;
+    padding: 2vmin;
+    border: 3px solid var(--text-color);
+    background: var(--number-color);
+    color: var(--button-text-color);
+    border-radius: 10px;
+    margin: auto;
+    font-size: 4vmin;
+    font-weight: 600;
+}
+
+#pop1 {
+    display: inline-block;
+}
+
+#pop2 {
+    font-size: 5vmin;
+    display: none;
+}
+
+#startgame {
+    background: var(--button-text-color);
+    color: var(--text-color);
+    font-family: 'Amatic SC', cursive;
+    font-size: 6vmin;
+    border: 2px solid var(--text-color);
+    font-weight: 300;
+}
+
+    #startgame:hover {
+        background: var(--background-color);
+    }
+
+@-webkit-keyframes num-scale {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes num-scale {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+#num {
+    position: absolute;
+    width: 13.3vmin;
+    height: auto;
+    -webkit-animation: num-scale 4s;
+    animation: num-scale 4s;
+}
+
+@-webkit-keyframes num-move {
+    0% {
+    }
+
+    100% {
+        left: 100%;
+        -webkit-transform: translate(13.3vmin);
+        transform: translate(13.3vmin);
+    }
+}
+
+@keyframes num-move {
+    0% {
+    }
+
+    100% {
+        left: 100%;
+        -webkit-transform: translate(13.3vmin);
+        transform: translate(13.3vmin);
+    }
+}
+
+#num2 {
+    position: absolute;
+    left: 0;
+    -webkit-transform: translate(-13.3vmin);
+    -ms-transform: translate(-13.3vmin);
+    transform: translate(-13.3vmin);
+    width: 13.3vmin;
+    height: auto;
+    -webkit-animation: num-move 9s;
+    animation: num-move 9s;
+}
+
+#select {
+    width: 13.3vmin;
+    height: auto;
+}
+
+#example {
+    margin: 5vmin;
+    display: inline-block;
+    width: 32vmin;
+    height: 14vmin;
+    text-align: center;
+    background: var(--button-hover);
+    color: var(--button-text-color);
+    border-radius: 60px/50px;
+    font-weight: 600;
+    font-size: 12vmin;
+}
+
+    #example:hover {
+        background: var(--text-color);
+    }
+
+#fieldex {
+    padding-top: 10vmin;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}

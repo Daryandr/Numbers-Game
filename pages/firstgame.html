@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/theme.js"></script>
+    <title>Game№1</title>
+</head>
+<body>
+    <main style="margin-top:3.5vmin">
+        <div class="numbers">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="popup" id="pop1">
+            Правила:<br />
+            Нажимайте на цифры в верном порядке.<br />
+            Помните, за неправильно нажатую цифру прибавляются штрафные секунды!<br />
+            <button id="startgame" class="game" onclick="startg()">Старт</button>
+        </div>
+        <div class="popup" id="pop2">
+            
+        </div>
+        <div id="field">
+
+        </div>
+    </main>
+    <footer>
+        <a class="menu" href="../index.html">Меню</a>
+        <div>Время:<time id="time">00:00</time></div>
+        <select id="theme" style="font-size:4vmin">
+            <option value="auto">Авто</option>
+            <option value="light">Светлая</option>
+            <option value="dark">Темная</option>
+        </select>
+    </footer>
+    <script src="../assets/js/fgame.js"></script>
+</body>
+</html>

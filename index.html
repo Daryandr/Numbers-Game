@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/theme.js"></script>
+    <title>Game</title>
+</head>
+<body>
+    <main>
+        <div class="name">Цифры по порядку</div>
+        Имя: <input value="Игрок" id="user" /><br />
+        <div class="info">
+        В игре 3 уровня,<br />
+        время каждого ограничено.<br />
+        Чем быстрее пройдешь уровень, тем больше получишь баллов.<br />
+        Пройдешь все уровни - узнаешь свой итоговый балл.<br />
+        </div><br />
+        <a class="game" onclick="saveUser()" href="pages/firstgame.html">Старт</a><br />
+        Тема:
+        <select id="theme">
+            <option value="auto">Авто</option>
+            <option value="light">Светлая</option>
+            <option value="dark">Темная</option>
+        </select>
+    </main>
+</body>
+</html>
